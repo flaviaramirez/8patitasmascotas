@@ -9,8 +9,10 @@
     <link rel="stylesheet" href="css/grid.css">
     <link rel="icon" href="img/8rosa.png">
     <script defer src="js/styles.js"></script>
-    <script src="https://kit.fontawesome.com/dd11e81c21.js" crossorigin="8"></script>
-    <script src="https://kit.fontawesome.com/0b38ef4ed8.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/6412b6d6c7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 
 </head>
 
@@ -46,16 +48,21 @@
                     <br>
                     <br>
                     <label for="name">Nombre:</label><br>
-                    <input type="text" id="Nombre" name="fname" placeholder="Escriba aquí su Nombre " required><br><br>
+                    <input type="text" id="Nombre" name="fname" placeholder="Escriba aquí su Nombre " required>
+                    <i class="fa-solid fa-circle-user"></i>
+                    <br><br>
                     <label for="lname">Apellido:</label><br>
                     <input type="text" id="Apellido" name="lname" placeholder="Escriba aquí su Apellido " required>
+                    <i class="fa-solid fa-address-card"></i>
                     <br><br>
                     <label for="phone">Teléfono:</label><br>
                     <input type="text" id="Teléfono" name="fname" placeholder="Escriba aquí su Teléfono "
-                        required><br><br>
+                        required>
+                        <i class="fa-solid fa-phone-flip"></i><br><br>
                     <label for="address">Dirección de envío:</label><br>
                     <input type="text" id="Dirección" name="lname" placeholder="Escriba aquí su Dirección "
-                        required><br><br>
+                        required>
+                        <i class="fa-solid fa-map-location-dot"></i><br><br>
                     <div>
                         <label>Email:</label><br>
                         <input type="email" placeholder="Email@" required>
@@ -75,7 +82,10 @@
                             <option value="Juguetes"> Juguetes</option>
                             <option value="Piedritas">Piedritas Sanitarias</option>
                         </select>
-                    </div><br>
+                        <i class="fa-solid fa-list-ul"></i>
+                    </div>
+                    
+                    <br>
                     <div>
                         <label>Dejanos la descripción de tu pedido:</label><br>
                         <textarea id="descripcion" placeholder="Detalla tu consulta" required></textarea>

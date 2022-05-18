@@ -10,7 +10,7 @@ html {
 
 body {
     font-size: 1.25rem;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Fredoka One', cursive !important;
     min-height: 100%;
 }
 
@@ -126,19 +126,19 @@ body {
 }
 
 .main {
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Fredoka One', cursive;
     grid-area: main;
     background-image: url('../img/fondo2.jpeg');
 }
 
 .main3 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Fredoka One', cursive;
     grid-area: main;
     background-image: url('../img/fondo3.jpeg');
 }
 
 .main2 {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Fredoka One', cursive;
     grid-area: main;
     background-image: url('../img/perros-y-gatos-2.jpg');
     background-position: center;
@@ -167,17 +167,18 @@ body {
     right: 0;
     bottom: 0;
     padding-bottom: 50px;
-    padding-left: 10%;
+    /* padding-left: 10%; */
     min-width: 100%;
     min-height: 100%;
     display: flex;
     flex-direction: row;
     /* make main axis horizontal (default setting) */
-    justify-content: left;
+    justify-content: center;
     /* center items horizontally, in this case */
     color: #520252;
     font-size: 14px;
     text-align: center;
+    font-family: 'Patrick Hand', cursive;
     
 }
 
@@ -185,7 +186,7 @@ body {
     padding: 10px;
     background-color: #f8dddd;
     height: 700px;
-    width: 500px;
+    width: auto;
     border-style: solid;
     border-color: #f59b9b;
     border-width: 2px;
@@ -198,7 +199,7 @@ body {
     padding: 10px;
     background-color: #f8dddd;
     height: 700px;
-    width: 500px;
+    width: auto;
     border-style: solid;
     border-color: #f59b9b;
     border-width: 2px;
@@ -248,26 +249,6 @@ body {
     padding: 40px;
 }
 
-.main-quienessomos {
-    display: flex;
-    padding: 10px;
-}
-
-.main-quienessomos-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    gap: 10px;
-    grid-auto-rows: auto;
-}
-
-.main-quienessomos-h1 {
-    font-size: 22px;
-    color: #502c2c;
-    text-align: center;
-    padding: 10px;
-}
-
 .main-envios-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -283,25 +264,60 @@ body {
     padding: 10px;
 }
 
-.main-quienessomos-h2 {
-    font-size: 22px;
+.map-responsive {
+    overflow:hidden;
+    padding-bottom:50%; /*Reduce este valor si el mapa fuera muy alto, por ejemplo 250px, puedes usar porcentajes, 50%*/
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.main-quienessomos {
+    display: flex;
+    flex-direction: row;
     padding: 10px;
-    color: #502c2c;
+}
+
+.main-quienessomos-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 20px;
+    gap: 10px;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.main-quienessomos-h1 {
+    font-size: 24px;
+    color: #ad0000;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-quienessomos-h2 {
+    font-size: 24px;
+    padding: 10px;
+    color: #ad0000;
     text-align: center;
 }
 
 .main-quienessomos-img {
     position: relative;
     overflow: hidden;
-    padding: 10px;     
+    padding: auto;
 }
 
 .main-quienessomos-p {
     padding: 20px;
-    text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
-    color:#000000;
+    color:#701313;
     font-weight: bold;
     line-height : 25px;
 }
@@ -463,32 +479,48 @@ body {
         flex-wrap: wrap;
         align-items: stretch;
     }
+    .main-contacto {
+        flex-direction: column;
+      }
+
+      .main-quienessomos {
+        flex-direction: column;
+      }
+
+      .main-quienessomos-container {
+        flex-direction: column;
+      }
 }
 
 @media (min-width: 600px) {
     .grid-container {
         grid-template:
             "header header" 90px
-            "main   main" auto "footer footer" auto/
-            150px auto;
+            "main   main" auto 
+            "footer footer" auto/ 150px auto;
     }
 
     .grid-container-index {
         grid-template:
             "header   header" 90px
-            "main     main" auto "footer   footer" auto/ 150px auto;
+            "main     main" auto 
+            "footer   footer" auto/ 150px auto;
     }
 }
 
 @media (min-width: 900px) {
     .grid-container {
         grid-template:
-            "header header header" 90px "main main main" auto "footer  footer footer" auto/ 150px auto 300px;
+            "header header header" 90px 
+            "main main main" auto 
+            "footer  footer footer" auto/ 150px auto 300px;
     }
 
     .grid-container-index {
         grid-template:
-            "header   header header" 90px "main main   main" auto "footer   footer footer" auto/ 150px auto auto;
+            "header   header header" 90px 
+            "main main   main" auto 
+            "footer   footer footer" auto/ 150px auto auto;
     }
 }
 
